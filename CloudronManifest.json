@@ -1,0 +1,50 @@
+{
+  "id": "org.dependencytrack.cloudronapp",
+  "title": "Dependency-Track",
+  "author": "OWASP Dependency-Track Contributors",
+  "description": "file://DESCRIPTION.md",
+  "changelog": "file://CHANGELOG.md",
+  "tagline": "Component analysis platform for SBOMs",
+  "version": "1.0.0",
+  "upstreamVersion": "5.2.0",
+  "healthCheckPath": "/health",
+  "httpPort": 8000,
+  "addons": {
+    "localstorage": {},
+    "postgresql": {},
+    "oidc": {
+      "loginRedirectUri": "/static/oidc-callback.html",
+      "publicClientLoginRedirectUri": "/static/oidc-callback.html"
+    },
+    "sendmail": {
+      "supportsDisplayName": false
+    }
+  },
+  "memoryLimit": 2147483648,
+  "manifestVersion": 2,
+  "website": "https://dependencytrack.org",
+  "documentationUrl": "https://docs.dependencytrack.org",
+  "contactEmail": "brutalbirdie@gmail.com",
+  "icon": "file://logo.png",
+  "tags": [
+    "security",
+    "sbom",
+    "devops"
+  ],
+  "checklist": {
+    "change-default-password": {
+      "message": "Log in with `admin` / `admin` (under **More options** on the login page) and set a new password"
+    }
+  },
+  "postInstallMessage": "file://POSTINSTALL.md",
+  "minBoxVersion": "10.1.5",
+  "optionalSso": true,
+  "packagerName": "BrutalBirdie",
+  "packagerUrl": "https://github.com/BrutalBirdie/Cloudron-Dependency-Track-App",
+  "iconUrl": "https://raw.githubusercontent.com/BrutalBirdie/Cloudron-Dependency-Track-App/refs/heads/main/logo.png",
+  "mediaLinks": [
+    "https://raw.githubusercontent.com/BrutalBirdie/Cloudron-Dependency-Track-App/refs/heads/main/screenshots/1.png",
+    "https://raw.githubusercontent.com/BrutalBirdie/Cloudron-Dependency-Track-App/refs/heads/main/screenshots/2.png"
+  ],
+  "packageUrl": "https://github.com/BrutalBirdie/Cloudron-Dependency-Track-App"
+}

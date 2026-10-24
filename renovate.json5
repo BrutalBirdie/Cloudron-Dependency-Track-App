@@ -1,0 +1,15 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        // picks up the `# renovate:` annotated ARGs in the Dockerfile
+        "customManagers:dockerfileVersions"
+    ],
+    "packageRules": [
+        {
+            // the apiserver and frontend are released together with the same version
+            "matchPackageNames": ["DependencyTrack/dependency-track", "DependencyTrack/frontend"],
+            "groupName": "Dependency-Track"
+        }
+    ]
+}
