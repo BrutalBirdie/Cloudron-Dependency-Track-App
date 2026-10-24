@@ -51,7 +51,7 @@ docker run -d --name "${app}" --network "${net}" --read-only --tmpfs /run:exec -
     -e CLOUDRON_MAIL_SMTP_SERVER="${smtp}" -e CLOUDRON_MAIL_SMTP_PORT=2525 -e CLOUDRON_MAIL_SMTP_USERNAME=u -e CLOUDRON_MAIL_SMTP_PASSWORD=p -e CLOUDRON_MAIL_FROM=dtrack@example.com \
     "${img}" >/dev/null
 
-if ! wait_for 180 curl -sf http://127.0.0.1:18000/health; then
+if ! wait_for 180 curl -sf ${api}/version; then
     fail "health" "app did not become healthy"
     exit 1
 fi
@@ -81,7 +81,7 @@ else
 fi
 
 docker restart "${app}" >/dev/null
-if wait_for 180 curl -sf http://127.0.0.1:18000/health; then pass "restart"; else fail "restart" "app did not become healthy"; fi
+if wait_for 180 curl -sf ${api}/version; then pass "restart"; else fail "restart" "app did not become healthy"; fi
 expect "login after restart" "^200$" "$(curl -s -o /dev/null -w '%{http_code}' -X POST ${api}/v1/user/login -d "username=admin&password=${admin_password}")"
 
 echo "==> ${failures} failures"

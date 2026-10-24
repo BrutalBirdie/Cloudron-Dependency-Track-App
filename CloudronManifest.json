@@ -7,7 +7,7 @@
   "tagline": "Component analysis platform for SBOMs",
   "version": "1.0.0",
   "upstreamVersion": "5.2.0",
-  "healthCheckPath": "/health",
+  "healthCheckPath": "/api/version",
   "httpPort": 8000,
   "addons": {
     "localstorage": {},
