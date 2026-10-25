@@ -5,8 +5,8 @@
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG.md",
   "tagline": "Component analysis platform for SBOMs",
-  "version": "1.0.1",
-  "upstreamVersion": "5.2.0",
+  "version": "1.0.2",
+  "upstreamVersion": "5.2.1",
   "healthCheckPath": "/api/version",
   "httpPort": 8000,
   "addons": {

@@ -5,3 +5,6 @@
 
 [1.0.1]
 * Update Dependency-Track to v5.2.0
+
+[1.0.2]
+* Update Dependency-Track to v5.2.1
