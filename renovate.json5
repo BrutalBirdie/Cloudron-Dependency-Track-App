@@ -5,6 +5,7 @@
         // picks up the `# renovate:` annotated ARGs in the Dockerfile
         "customManagers:dockerfileVersions"
     ],
+    "assignees": ["BrutalBirdie"],
     "packageRules": [
         {
             // the apiserver and frontend are released together with the same version
