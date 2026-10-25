@@ -112,6 +112,62 @@
             "creationDate": "Sun, 25 Oct 2026 07:32:26 GMT",
             "ts": "Sun, 25 Oct 2026 07:32:26 GMT",
             "publishState": "published"
+        },
+        "1.0.2": {
+            "manifest": {
+                "id": "org.dependencytrack.cloudronapp",
+                "title": "Dependency-Track",
+                "author": "OWASP Dependency-Track Contributors",
+                "description": "Dependency-Track is an intelligent Component Analysis platform that allows organizations to identify and reduce risk in the software supply chain. It ingests CycloneDX SBOMs and tracks every component across all projects and versions.\n\n### Features\n\n* Finds known vulnerabilities from NVD, GitHub Advisories, OSV and others\n* Flags outdated components by checking npm, PyPI, Packagist, Maven, Go and more\n* Policy engine for security, license and operational rules\n* License risk tracking\n* REST API for CI/CD integration\n",
+                "changelog": "* Update Dependency-Track to v5.2.1\n",
+                "tagline": "Component analysis platform for SBOMs",
+                "version": "1.0.2",
+                "upstreamVersion": "5.2.1",
+                "healthCheckPath": "/api/version",
+                "httpPort": 8000,
+                "addons": {
+                    "localstorage": {},
+                    "postgresql": {},
+                    "oidc": {
+                        "loginRedirectUri": "/static/oidc-callback.html",
+                        "publicClientLoginRedirectUri": "/static/oidc-callback.html"
+                    },
+                    "sendmail": {
+                        "supportsDisplayName": false
+                    }
+                },
+                "memoryLimit": 2147483648,
+                "manifestVersion": 2,
+                "website": "https://dependencytrack.org",
+                "documentationUrl": "https://docs.dependencytrack.org",
+                "contactEmail": "brutalbirdie@gmail.com",
+                "icon": "file://logo.png",
+                "tags": [
+                    "security",
+                    "sbom",
+                    "devops"
+                ],
+                "checklist": {
+                    "change-default-password": {
+                        "message": "Log in with `admin` / `admin` (under **More options** on the login page) and set a new password"
+                    }
+                },
+                "postInstallMessage": "Log in with username `admin` and password `admin`. You are asked to set a new password on first login.\n\n<sso>\nThe local login form is under **More options** on the login page.\n\nCloudron users are created on first login without any permissions. To grant access, create a team under **Administration → Access Management → Teams** and map it to a Cloudron group under **OpenID Connect Groups**. Group membership is synchronized on every login.\n</sso>\n\nThe first vulnerability database download takes several minutes after install.\n",
+                "minBoxVersion": "10.1.5",
+                "optionalSso": true,
+                "packagerName": "BrutalBirdie",
+                "packagerUrl": "https://github.com/BrutalBirdie/Cloudron-Dependency-Track-App",
+                "iconUrl": "https://raw.githubusercontent.com/BrutalBirdie/Cloudron-Dependency-Track-App/refs/heads/main/logo.png",
+                "mediaLinks": [
+                    "https://raw.githubusercontent.com/BrutalBirdie/Cloudron-Dependency-Track-App/refs/heads/main/screenshots/1.png",
+                    "https://raw.githubusercontent.com/BrutalBirdie/Cloudron-Dependency-Track-App/refs/heads/main/screenshots/2.png"
+                ],
+                "packageUrl": "https://github.com/BrutalBirdie/Cloudron-Dependency-Track-App",
+                "dockerImage": "ghcr.io/brutalbirdie/cloudron-dependency-track-app:1.0.2"
+            },
+            "creationDate": "Sun, 25 Oct 2026 13:19:47 GMT",
+            "ts": "Sun, 25 Oct 2026 13:19:47 GMT",
+            "publishState": "published"
         }
     }
 }
