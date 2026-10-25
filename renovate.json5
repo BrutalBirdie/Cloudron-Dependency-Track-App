@@ -6,7 +6,15 @@
         "customManagers:dockerfileVersions"
     ],
     "assignees": ["BrutalBirdie"],
+    "assignAutomerge": true,
+    "automerge": true,
+    // GitHub auto-merge needs branch protection, which would block the release workflows pushing to main
+    "platformAutomerge": false,
     "packageRules": [
+        {
+            "matchUpdateTypes": ["major"],
+            "automerge": false
+        },
         {
             // the apiserver and frontend are released together with the same version
             "matchPackageNames": ["DependencyTrack/dependency-track", "DependencyTrack/frontend"],
