@@ -6,6 +6,7 @@
         "customManagers:dockerfileVersions"
     ],
     "assignees": ["BrutalBirdie"],
+    "commitBody": "Co-authored-by: BrutalBirdie <20840012+BrutalBirdie@users.noreply.github.com>",
     "assignAutomerge": true,
     "automerge": true,
     // GitHub auto-merge needs branch protection, which would block the release workflows pushing to main
