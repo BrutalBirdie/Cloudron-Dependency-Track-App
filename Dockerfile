@@ -8,10 +8,10 @@ RUN apt-get update && \
     rm -rf /var/cache/apt /var/lib/apt/lists
 
 # renovate: datasource=github-releases depName=DependencyTrack/dependency-track versioning=semver
-ARG DEPENDENCY_TRACK_VERSION=5.2.1
+ARG DEPENDENCY_TRACK_VERSION=5.2.2
 
 # renovate: datasource=github-releases depName=DependencyTrack/frontend versioning=semver
-ARG DEPENDENCY_TRACK_FRONTEND_VERSION=5.2.1
+ARG DEPENDENCY_TRACK_FRONTEND_VERSION=5.2.2
 
 RUN curl -sSLf "https://github.com/DependencyTrack/dependency-track/releases/download/${DEPENDENCY_TRACK_VERSION}/dependency-track-apiserver-dist.tar.gz" | tar -xz -C /app/code/apiserver
 
